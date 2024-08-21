@@ -6,7 +6,7 @@ function App() {
 
     return (
         <div className="App">
-            {user ? <h1>Welcome, {user.username}!</h1> : <Login setUser={setUser} />}
+            {user ? <h1>Welcome, {user.uname}!</h1> : <Login setUser={setUser} />}
         </div>
     );
 }
