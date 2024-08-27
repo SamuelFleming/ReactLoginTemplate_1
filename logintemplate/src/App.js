@@ -18,7 +18,7 @@ function App() {
     };
 
     const appOverview = "This is where an overview of the app, or some other text could appear, for instance:\n\nThis app is simply a template Node.js application that its Developer, SamuelFleming, intend to use onm their next project: the Spotify Song to Library Comaprison App (for CAB432, 2024 Semester 2)";
-    const logoPath = "C:\Users\User\Desktop\Tech Projects\ReactLoginTemplate\logintemplate\src\Triskele.png";
+    const logoPath = "logintemplate\public\AppLogo.png";
 
 
     return (
@@ -27,7 +27,10 @@ function App() {
 
             <div className="content">
                 {user ? (
-                    <h1>Welcome, {user.username}!</h1>
+                    <div>
+                        <h1>Welcome, {user.username}!</h1>
+                    </div>
+                    
                 ) : (
                     showLogin ? (
                         <Login setUser={setUser} />

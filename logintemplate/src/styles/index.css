@@ -4,9 +4,32 @@
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #282c34;
     padding: 20px;
     color: white;
+}
+
+.logo-container .app-logo {
+    height: 50px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    height: 40px;
+    border-radius: 50%;
 }
 
 .footer {

@@ -16,7 +16,9 @@ function Login({ setUser }) {
             });
             const data = await response.json();
             if (data.success) {
-                setUser(data.user);
+                // Store the JWT token in local storage or state
+                // localStorage.setItem('token', data.token);
+                setUser({ username });  // Update user state
                 setError('');
             } else {
                 setError(data.message);
@@ -27,26 +29,25 @@ function Login({ setUser }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} autoComplete='off'>
+        <form onSubmit={handleSubmit} autoComplete="off">
             <h2>Login</h2>
-            <label>
-                
+            <label >
+                Username:
                 <input 
-                    type="text"
-                    placeholder="Username"
+                    type="text" 
                     value={username} 
-                    onChange={(e) => setUsername(e.target.value)} 
-                    autoComplete="username"  // Update to "username" for modern browsers
+                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="username"
+                    autoComplete="off"
                 />
             </label>
-            <label>
-                
+            <label autoComplete="off">
+                Password:
                 <input 
                     type="password" 
-                    placeholder="Password"
                     value={password} 
-                    onChange={(e) => setPassword(e.target.value)} 
-                    autoComplete="current-password"  // Update to "current-password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="off"
                 />
             </label>
             {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -56,4 +57,5 @@ function Login({ setUser }) {
 }
 
 export default Login;
+
 
