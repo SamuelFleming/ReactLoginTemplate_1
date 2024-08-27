@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 function Login({ setUser }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    
     const [error, setError] = useState('');
-    
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Submitting:', { username, password });
         try {
             const response = await fetch('http://localhost:5000/login', {
                 method: 'POST',
@@ -36,7 +35,7 @@ function Login({ setUser }) {
                     type="text" 
                     value={username} 
                     onChange={(e) => setUsername(e.target.value)} 
-                    autoomplete="new-username"
+                    autoComplete="username"  // Update to "username" for modern browsers
                 />
             </label>
             <label>
@@ -45,12 +44,14 @@ function Login({ setUser }) {
                     type="password" 
                     value={password} 
                     onChange={(e) => setPassword(e.target.value)} 
-                    autoComplete="new-password"
+                    autoComplete="current-password"  // Update to "current-password"
                 />
             </label>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <button type="submit">Login</button>
         </form>
     );
 }
 
 export default Login;
+
