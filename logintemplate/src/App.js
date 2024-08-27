@@ -12,9 +12,18 @@ function App() {
         setShowLogin(true);
     };
 
+    const handleLogout = () => {
+        setUser(null);  // Clear user state on logout
+        setShowLogin(false);  // Return to the home screen
+    };
+
+    const appOverview = "This is where an overview of the app, or some other text could appear, for instance:\n\nThis app is simply a template Node.js application that its Developer, SamuelFleming, intend to use onm their next project: the Spotify Song to Library Comaprison App (for CAB432, 2024 Semester 2)";
+    const logoPath = "C:\Users\User\Desktop\Tech Projects\ReactLoginTemplate\logintemplate\src\Triskele.png";
+
+
     return (
         <div className="App">
-            <Header />
+            <Header user={user} onLogout={handleLogout}/>
 
             <div className="content">
                 {user ? (
@@ -25,13 +34,13 @@ function App() {
                     ) : (
                         <div className="home">
                             <div className="logo-container">
-                                <img src="/path-to-your-logo.png" alt="App Logo" className="app-logo" />
+                                <img src={logoPath} alt="App Logo" className="app-logo" />
                             </div>
                             <div className="overview-container">
                                 <h2>App Overview</h2>
                                 <textarea
                                     className="app-overview"
-                                    placeholder="This is where you can write an overview of the app..."
+                                    placeholder={appOverview}
                                     rows="10"
                                     cols="50"
                                 ></textarea>

@@ -30,18 +30,20 @@ function Login({ setUser }) {
         <form onSubmit={handleSubmit} autoComplete='off'>
             <h2>Login</h2>
             <label>
-                Username:
+                
                 <input 
-                    type="text" 
+                    type="text"
+                    placeholder="Username"
                     value={username} 
                     onChange={(e) => setUsername(e.target.value)} 
                     autoComplete="username"  // Update to "username" for modern browsers
                 />
             </label>
             <label>
-                Password:
+                
                 <input 
                     type="password" 
+                    placeholder="Password"
                     value={password} 
                     onChange={(e) => setPassword(e.target.value)} 
                     autoComplete="current-password"  // Update to "current-password"

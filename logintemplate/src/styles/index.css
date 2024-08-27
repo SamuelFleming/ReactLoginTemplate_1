@@ -1,52 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
 .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-form {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    margin-bottom: 1em;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-input {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    width: 100%;
-    padding: 0.7em;
-    border: none;
-    background-color: #28a745;
+.header {
+    background-color: #282c34;
+    padding: 20px;
     color: white;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
+.footer {
+    background-color: #282c34;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+.home {
+    padding: 20px;
+}
+
+.logo-container {
+    margin: 20px 0;
+}
+
+.app-logo {
+    width: 150px;
+    height: auto;
+}
+
+.overview-container {
+    margin: 20px 0;
+}
+
+.app-overview {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.placeholder-component {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
